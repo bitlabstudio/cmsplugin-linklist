@@ -49,7 +49,7 @@ Run the south migrations to create the app's database tables::
 Usage
 -----
 
-TODO
+Just create a cms page and add the plugin to a placeholder field.
 
 
 Roadmap
