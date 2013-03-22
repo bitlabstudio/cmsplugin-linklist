@@ -1,0 +1,6 @@
+*.pyc
+*.sql
+*.wpr
+coverage/
+db.sqlite
+media/
