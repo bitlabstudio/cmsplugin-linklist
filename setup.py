@@ -17,7 +17,7 @@ setup(
     long_description=read('README.rst'),
     license='The MIT License',
     platforms=['OS Independent'],
-    keywords='django, reusable, position, reorder, order',
+    keywords='django, links, linklist, reusable',
     author='Tobias Lorenz',
     author_email='tobias.lorenz@bitmazk.com',
     url='https://github.com/bitmazk/cmsplugin-linklist',

@@ -13,8 +13,8 @@ class CMSLinkPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context.update({
-            'object_list_left': Link.objects.filter(order='left'),
-            'object_list_right': Link.objects.filter(order='right'),
+            'object_list_left': Link.objects.filter(alignment='left'),
+            'object_list_right': Link.objects.filter(alignment='right'),
             'placeholder': placeholder,
         })
         return context

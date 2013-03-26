@@ -13,7 +13,8 @@ class Link(models.Model):
     :url: URL of the link.
     :image: Screenshot of the link.
     :description: Long description of the link.
-    :order: Choices to render the link left or right aligned.
+    :position: Current position integer of the object.
+    :alignment: Choices to render the link left or right aligned.
 
     """
     title = models.CharField(
@@ -42,8 +43,8 @@ class Link(models.Model):
         blank=True, null=True,
     )
 
-    order = models.CharField(
-        verbose_name=_('Order'),
+    alignment = models.CharField(
+        verbose_name=_('Alignment'),
         max_length=10,
         choices=(
             ('left', 'left'),
