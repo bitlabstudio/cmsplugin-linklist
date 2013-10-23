@@ -1,5 +1,7 @@
 === ongoing ===
 
+=== 0.2 ===
+
 - Added LinkCategory model and CMSLinklistCategoryPlugin. This allows to have
   several different link lists on different pages of your site.
 
