@@ -4,7 +4,7 @@ from django.utils.translation import ugettext as _
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 
-from .models import Link
+from .models import Link, LinklistCategoryPlugin
 
 
 class CMSLinkPlugin(CMSPluginBase):
@@ -20,4 +20,18 @@ class CMSLinkPlugin(CMSPluginBase):
         return context
 
 
+class CMSLinklistCategoryPlugin(CMSPluginBase):
+    model = LinklistCategoryPlugin
+    name = _("Linklist Category Plugin")
+    render_template = "linklist/category_list.html"
+
+    def render(self, context, instance, placeholder):
+        context.update({
+            'instance': instance,
+            'object_list': instance.category.links.all(),
+        })
+        return context
+
+
 plugin_pool.register_plugin(CMSLinkPlugin)
+plugin_pool.register_plugin(CMSLinklistCategoryPlugin)
