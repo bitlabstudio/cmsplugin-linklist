@@ -42,12 +42,12 @@ class Link(models.Model):
 
     title = models.CharField(
         verbose_name=_('Title'),
-        max_length=50,
+        max_length=256,
     )
 
     url = models.URLField(
         verbose_name=_('URL'),
-        max_length=50,
+        max_length=2048,
     )
 
     image = FilerImageField(
@@ -57,7 +57,7 @@ class Link(models.Model):
 
     description = models.TextField(
         verbose_name=_('Description'),
-        max_length=500,
+        max_length=4000,
         blank=True,
     )
 

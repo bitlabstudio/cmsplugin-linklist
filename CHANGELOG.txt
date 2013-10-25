@@ -1,5 +1,7 @@
 === ongoing ===
 
+- Extended field lengths
+
 === 0.2 ===
 
 - Added LinkCategory model and CMSLinklistCategoryPlugin. This allows to have
